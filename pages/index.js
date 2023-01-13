@@ -1,9 +1,14 @@
 import React from 'react'
 
-const Home
- = () => {
+//INTERNAL IMPORT
+import Style from "../styles/index.module.css";
+import { BigNFTSlider, HeroSection, Service } from '../Components/ComponentIndex';
+const Home = () => {
   return (
-    <div> Home
+    <div className={Style.homePage}>
+      <HeroSection />
+      <Service />
+      <BigNFTSlider />
     </div>
   )
 }
