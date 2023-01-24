@@ -1,0 +1,295 @@
+
+
+.FollowerTabCard{
+    background-color: var(--main-bg-color);
+    border-radius: 2rem;
+    transition: all .2s ease-in;
+    cursor: pointer;
+    position: relative;
+}
+
+.FollowerTabCard_box:hover{
+    box-shadow: var(--box-shadow);
+    border-radius: 2rem;
+}
+
+.FollowerTabCard_rank{
+    position: absolute;
+    z-index: 111;
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    border-radius: 2rem;
+    width: 3rem;
+    font-size: .8rem;
+    line-height: 0;
+    padding: 0 .4rem;
+    margin: .7rem .6rem;
+    transition: all .3s ease-in;    
+}
+
+.FollowerTabCard_rank:hover{
+    background-color: transparent;
+    color: var(--icons-color);
+}
+
+.FollowerTabCard_box_img_img{
+    width: 100%;
+    height: unset;
+    border-radius: 2rem;
+}
+
+.FollowerTabCard_box_img{
+    grid-column: 1 / -1;
+}
+
+.FollowerTabCard_box_profile{
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: -4rem;
+    position: relative;
+}
+
+.FollowerTabCard_box_profile_img{
+    position: relative;
+    width: 40%;
+    height: unset;
+    border-radius: 50%;
+    padding: 1rem;
+    z-index: 2243653542;
+}
+
+.FollowerTabCard_box_profile::before{
+    position: absolute;
+    content: "";
+    width: 7rem;
+    height: 7rem;
+    background-color: var(--main-bg-color);
+    border-radius: 50%;
+    top: 0%;
+    left: 30%;
+}
+
+.FollowerTabCard_box_info{
+    display: flex;
+    grid-column: 1 / -1;
+    align-items: center;
+    line-height: 0;
+    justify-content: space-around;
+    margin-top: -1rem;
+    padding-inline: 1rem;
+    padding-bottom: 1rem;
+}
+
+.FollowerTabCard_box_info h4{
+    font-size: 1rem;
+    line-height: 0;
+}
+
+.FollowerTabCard_box_info_following a{
+    background-color: var(--icons-color);
+    border-radius: 2rem;
+    color: var(--main-bg-color);
+    padding: .7rem .5rem; 
+    font-size: .7rem;
+    font-weight: 600;
+    transition: all .3s ease-in;
+    border: 1px solid var(--icons-color);
+}
+
+.FollowerTabCard_box_info_following a:hover{
+    background-color: transparent;   
+    color: var(--icons-color);
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 350px) {
+    .FollowerTabCard_box_profile::before {
+        width: 8rem;
+        height: 9rem;
+        top: 4%;
+        left: 31%;
+    }
+
+    .FollowerTabCard_box_info {
+        padding-inline: 2rem;
+    }
+
+    .FollowerTabCard_box_img_img {
+        height: 200;
+    }
+}
+
+@media screen and (min-device-width: 358px) and (max-device-width: 377px) {
+    .FollowerTabCard_box_profile::before {
+        width: 9rem;
+        height: 9rem;
+        top: 2%;
+        left: 31%;
+    }
+
+    .FollowerTabCard_box_info {
+        padding-inline: 2rem;
+    }
+
+    .FollowerTabCard_box_img_img {
+        height: 200;
+    }
+}
+
+@media screen and (min-device-width: 377px) and (max-device-width: 408px) {
+    .FollowerTabCard_box_profile::before{
+        width: 10rem;
+        height: 9rem;
+        top: -2%;
+        left: 30%;
+    }
+
+    .FollowerTabCard_box_info{
+        padding-inline: 2rem;
+    }
+
+    .FollowerTabCard_box_img_img{
+        height: 200;
+    }
+}
+@media screen and (min-device-width: 410px) and (max-device-width: 425px) {
+    .FollowerTabCard_box_profile::before{
+        width: 10rem;
+        height: 9rem;
+        top: -2%;
+        left: 32%;
+    }
+
+    .FollowerTabCard_box_info{
+        padding-inline: 2rem;
+    }
+
+    .FollowerTabCard_box_img_img{
+        height: 200;
+    }
+}
+@media screen and (min-device-width: 427px) and (max-device-width: 460px) {
+    .FollowerTabCard_box_profile::before{
+        width: 10rem;
+        height: 9rem;
+        top: -2%;
+        left: 32%;
+    }
+
+    .FollowerTabCard_box_info{
+        padding-inline: 2rem;
+    }
+
+    .FollowerTabCard_box_img_img{
+        height: 200;
+    }
+}
+@media screen and (min-device-width: 460px) and (max-device-width: 470px) {
+    .FollowerTabCard_box_profile::before{
+        width: 11rem;
+        height: 9rem;
+        top: -1%;
+        left: 31.5%;
+    }
+}
+
+@media screen and (min-device-width: 472px) and (max-device-width: 503px) {
+    .FollowerTabCard_box_profile::before{
+        width: 11rem;
+        height: 9rem;
+        top: -1%;
+        left: 32.5%;
+    }
+}
+@media screen and (min-device-width: 505px) and (max-device-width: 520px) {
+    .FollowerTabCard_box_profile::before{
+        width: 14rem;
+        height: 15rem;
+        top: -4%;
+        left: 29%;
+    }
+
+    .FollowerTabCard_box_profile_img{
+        top: -23%;
+    }
+
+    .FollowerTabCard_box_profile{
+        top: -10%;
+    }
+}
+
+@media screen and (min-device-width: 521px) and (max-device-width: 540px) {
+    .FollowerTabCard_box_profile::before {
+        width: 14rem;
+        height: 15rem;
+        top: -4%;
+        left: 29.6%;
+    }
+
+}
+@media screen and (min-device-width: 540px) and (max-device-width: 570px) {
+    .FollowerTabCard_box_profile::before {
+        width: 14rem;
+        height: 15rem;
+        top: -4%;
+        left: 30.4%;
+    }
+
+  
+
+}
+@media screen and (min-device-width: 572px) and (max-device-width: 668px) {
+    .FollowerTabCard_box_profile::before {
+        width: 16rem;
+        height: 15rem;
+        top: -10%;
+        left: 31%;
+    }
+
+      
+
+}
+@media screen and (min-device-width: 670px) and (max-device-width: 768px) {
+    .FollowerTabCard_box_profile::before {
+        width: 16rem;
+        height: 15rem;
+        top: -10%;
+        left: 33%;
+    }
+
+      
+
+}
+
+
+@media screen and (min-device-width: 770px) and (max-device-width: 860px) {
+    .FollowerTabCard_box_profile::before{
+        width: 9rem;
+        height: 9rem;
+        top: -1%;
+        left: 30.5%;
+    }
+}
+@media screen and (min-device-width: 861px) and (max-device-width: 904px) {
+    .FollowerTabCard_box_profile::before{
+        width: 9rem;
+        height: 9rem;
+        top: -1%;
+        left: 32%;
+    }
+}
+@media screen and (min-device-width: 906px) and (max-device-width: 1008px) {
+    .FollowerTabCard_box_profile::before{
+        width: 10rem;
+        height: 9rem;
+        top: -1%;
+        left: 31%;
+    }
+}
+@media screen and (min-device-width: 1008px) and (max-device-width: 1024px) {
+    .FollowerTabCard_box_profile::before{
+        width: 10rem;
+        height: 9rem;
+        top: -1%;
+        left: 32%;
+    }
+}

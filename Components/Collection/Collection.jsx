@@ -10,30 +10,30 @@ import Style from "./Collection.module.css";
 import DaysComponents from "./DaysComponents/DaysComponents";
 
 const Collection = () => {
-  const [popular, setPopular] = useState(false);
-  const [following, setFollowing] = useState(false);
-  const [news, setNews] = useState(false);
+  const [popular, setPopular] = useState(true);
+  const [following, setFollowing] = useState(true);
+  const [news, setNews] = useState(true);
 
   const CardArray = [1, 2, 3, 4, 5, 6, 7, 8];
   const followingArray = [1, 2, 3, 4];
   const newsArray = [1, 2, 3, 4, 5, 6];
 
   const openPopular = () => {
-    if (!popular) {
+    if (!popular || popular) {
       setPopular(true);
       setFollowing(false);
       setNews(false);
     }
   };
   const openNews = () => {
-    if (!news) {
+    if (!news || news) {
       setPopular(false);
       setFollowing(false);
       setNews(true);
     }
   };
   const openFollower = () => {
-    if (!following) {
+    if (!following || following) {
       setPopular(false);
       setFollowing(true);
       setNews(false);

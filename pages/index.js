@@ -3,10 +3,12 @@ import React from 'react'
 //INTERNAL IMPORT
 import Style from "../styles/index.module.css";
 import {
+  AudioLive,
   BigNFTSlider,
   Category,
   Collection,
   Filter,
+  FollowerTab,
   HeroSection,
   NFTCard,
   Service,
@@ -19,10 +21,16 @@ const Home = () => {
       <HeroSection />
       <Service />
       <BigNFTSlider />
+        <Title
+        heading="Latest Audio Collection"
+        paragraph="Discover the most outstanding NFTs in all topics of life"
+      />
+      <AudioLive />
       <Title
         heading="New Collection"
         paragraph="Discover the most outstanding NFTs in all topics of life"
       />
+      <FollowerTab />
       <Collection />
       <Title
         heading="Featured NFTs"
