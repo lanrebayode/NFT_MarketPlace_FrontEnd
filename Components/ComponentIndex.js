@@ -12,6 +12,10 @@ import { NFTCard } from './NFTCard/NFTCard';
 import Collection from './Collection/Collection';
 import FollowerTab from './FollowerTab/FollowerTab';
 import AudioLive from './AudioLive/AudioLive';
+import LikeProfile from './LikeProfile/LikeProfile';
+import Slider from './Slider/Slider';
+import Brand from './Brand/Brand';
+import Video from './Video/Video';
 export {
     Button,
     Footer,
@@ -26,5 +30,9 @@ export {
     NFTCard,
     Collection,
     FollowerTab,
-    AudioLive
+    AudioLive,
+    LikeProfile,
+    Slider,
+    Brand,
+    Video
 };

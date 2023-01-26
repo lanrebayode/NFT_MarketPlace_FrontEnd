@@ -1,6 +1,7 @@
 
 .audioLive{
     width: 100%;
+    margin-top: 3rem;
 }
 
 .audioLive_box{
@@ -62,4 +63,41 @@
     .audioLive_box_right{
         gap: 2rem;
     }
+
+    .audioLive_box_left{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
+@media screen and (min-device-width: 425px) and (max-device-width: 768px) {
+    .audioLive_box{
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .audioLive_box_right{
+        gap: 2rem;
+    }
+
+    .audioLive_box_left{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-device-width: 770px) and (max-device-width: 1024px) {
+    .audioLive_box{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .audioLive_box_right{
+        gap: 2rem;
+    }
+
+    
+    .audioLive_box_left{
+        margin: 0 auto;
+    }
+}
+
+    

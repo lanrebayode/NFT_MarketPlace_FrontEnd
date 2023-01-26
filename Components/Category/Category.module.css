@@ -5,7 +5,7 @@
 }
 
 .category{
-    padding: 4rem 4rem;
+    padding: 4rem 1rem;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
@@ -20,7 +20,7 @@
     padding-bottom: 1rem;
     
     
-}
+}  
 
 /* On Hover not working */
 .category_box:hover {

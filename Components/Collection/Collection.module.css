@@ -70,15 +70,33 @@
         font-weight: 500;
     }
 }
-@media screen and (min-device-width: 427px) and (max-device-width: 1024px){
+@media screen and (min-device-width: 427px) and (max-device-width: 768px){
     .collection_title{
         width: 90%;
     }
 
     .collection_box{
         width: 90%;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 4rem;
+    }
+
+    .collection_collections_btn button{
+        font-size: 1rem;
+        padding: .5rem;
+        font-weight: 500;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-device-width: 770px) and (max-device-width: 1024px){
+    .collection_title{
+        width: 90%;
+    }
+
+    .collection_box{
+        width: 95%;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
 
     .collection_collections_btn button{

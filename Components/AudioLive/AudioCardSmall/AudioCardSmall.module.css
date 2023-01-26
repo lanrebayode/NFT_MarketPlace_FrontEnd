@@ -43,6 +43,8 @@
 
 .audioPlayer_box_playBtn{
     font-size: 2rem;
-    background-color: var(--main-bg-color);
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
     border-radius: 50%;
+    padding: 1rem;
 }

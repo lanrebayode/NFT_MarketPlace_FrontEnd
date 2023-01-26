@@ -5,6 +5,7 @@ import Style from "../styles/index.module.css";
 import {
   AudioLive,
   BigNFTSlider,
+  Brand,
   Category,
   Collection,
   Filter,
@@ -13,8 +14,10 @@ import {
   NFTCard,
   Service,
   Subscribe,
-  Title
+  Title,
+  Video
 } from '../Components/ComponentIndex';
+import Slider from '../Components/Slider/Slider';
 const Home = () => {
   return (
     <div className={Style.homePage}>
@@ -22,7 +25,7 @@ const Home = () => {
       <Service />
       <BigNFTSlider />
         <Title
-        heading="Latest Audio Collection"
+        heading="Audio Collection"
         paragraph="Discover the most outstanding NFTs in all topics of life"
       />
       <AudioLive />
@@ -31,12 +34,18 @@ const Home = () => {
         paragraph="Discover the most outstanding NFTs in all topics of life"
       />
       <FollowerTab />
+      
+     
+      <Slider />
+
       <Collection />
+      
       <Title
         heading="Featured NFTs"
         paragraph="Discover the most outstanding NFTs in all topics of life"
       />
       <Filter />
+
       <NFTCard />
       <Title
         heading="Browse by Category"
@@ -44,6 +53,8 @@ const Home = () => {
       />
       <Category />
       <Subscribe />
+      <Brand />
+      <Video /> 
     </div>
   )
 }

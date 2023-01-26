@@ -30,7 +30,7 @@ export const FollowerTabCard = ({ i, el }) => {
         <div className={Style.FollowerTabCard_box_img}>
           <Image
             className={Style.FollowerTabCard_box_img_img}
-            src={images.creatorbackground1}
+            src={el.background}
             alt="backgroung "
             width={500}
             height={300}
@@ -41,7 +41,7 @@ export const FollowerTabCard = ({ i, el }) => {
           <Image
             className={Style.FollowerTabCard_box_profile_img}
             alt="profile picture"
-            src={images.user1}
+            src={el.user}
             width={50}
             height={50}
           />
