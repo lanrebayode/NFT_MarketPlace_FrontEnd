@@ -1,0 +1,27 @@
+
+
+.banner_img_mobile{
+    display: none;
+}
+
+.banner_img{
+    width: 100%;
+    height: unset;
+}
+
+@media screen and (max-width: 35em) {
+    .banner_img_mobile{
+        display: block;
+        width: 100%;
+            height: unset;
+    }
+    .banner_img_mobile_img{
+        width: 100%;
+        height: unset;
+    }
+
+    .banner_img{
+        display: none;
+       
+    }
+}

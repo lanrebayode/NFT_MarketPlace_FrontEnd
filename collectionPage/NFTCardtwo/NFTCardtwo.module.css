@@ -1,0 +1,126 @@
+
+.NFTCardtwo{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem
+}
+
+.NFTCardtwo_box{
+    display: grid;
+    cursor: pointer;
+    transition: all .3 ease-in;
+    border-radius: 1rem;
+}
+
+.NFTCardtwo_box:hover{
+    box-shadow: var(--box-shadow);
+}
+
+.NFTCardtwo_box_like{
+    padding: 1rem;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 111111;
+}
+
+.NFTCardtwo_box_like_box_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.NFTCardtwo_box_like_box_box_icon{
+    color: var(--icons-color);
+    font-size: 2rem;
+}
+
+.NFTCardtwo_box_like_box_box p{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    padding: .2rem .5rem;
+    border-radius: 2rem;
+}
+
+.NFTCardtwo_box_img{
+     grid-column: 1 / -1;
+    grid-row: 1 / -1;
+}
+
+.NFTCardtwo_box_img_img{
+    border-radius: 1rem;
+    width: 100%;
+    height: unset;
+}
+
+.NFTCardtwo_box_info{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.NFTCardtwo_box_info_left{
+    line-height: 0;
+}
+
+.NFTCardtwo_box_info small{
+    font-size: 1rem;
+}
+
+.NFTCardtwo_box_info_left p{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.NFTCardtwo_box_price{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    line-height: 0;
+    padding: 1rem;
+}
+
+.NFTCardtwo_box_price_box p{
+   border: 1px solid var(--icons-color);
+   padding: 1.5rem 1rem 1rem 1rem; 
+   font-size: 1rem;
+   font-weight: 500;
+   margin-top: .5rem;
+   border-radius: .3rem;
+
+}
+
+.NFTCardtwo_box_price_box small{
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    border-radius: .3rem;
+    padding: .3rem;
+    margin-left: 0 auto;
+}
+
+.NFTCardtwo_box_price_stock{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.1rem;
+}
+
+
+@media screen and (max-width: 35em) {
+    .NFTCardtwo{
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .NFTCardtwo{
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+

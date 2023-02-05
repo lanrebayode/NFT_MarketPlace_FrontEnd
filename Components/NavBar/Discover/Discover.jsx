@@ -8,30 +8,34 @@ import Style from "./Discover.module.css";
 const discover = [
   {
     name: "Collection",
-    link: "NFT-details",
+    link: "CollectionPage",
   },
   {
     name: "Search",
-    link: "search",
+    link: "searchPage",
   },
   {
     name: "Author Profile",
-    link: "author-profile",
+    link: "author",
   },
   {
     name: "NFT Details",
-    link: "NFT-details",
+    link: "NFTDetails",
   },
   {
     name: "Account Settings",
-    link: "account-setting",
+    link: "account",
+  },
+  {
+    name: "Upload NFT",
+    link: "uploadNft",
   },
   {
     name: "Connect Wallet",
-    link: "Connect-wallet",
+    link: "connectWallet",
   },
   {
-    name: "BLog",
+    name: "Blog",
     link: "blog",
   },
 ];
