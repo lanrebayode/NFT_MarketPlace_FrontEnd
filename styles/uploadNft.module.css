@@ -57,3 +57,21 @@
         line-height: 1.1rem;
     }
 }
+@media screen and (min-width: 450px) and (max-width: 1024px) {
+    .uploadNft_box{
+        width: 90%;
+    }
+
+    .uploadNft_box_heading p{
+        width: 100%;
+    }
+
+    .uploadNft_box_heading h1{
+        font-size: 2rem;
+    }
+
+    .uploadNft_box_title h2{
+        font-size: 1.5rem;
+        line-height: 1.1rem;
+    }
+}
