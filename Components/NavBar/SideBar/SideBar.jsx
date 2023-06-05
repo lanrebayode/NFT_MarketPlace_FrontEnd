@@ -138,6 +138,9 @@ const SideBar = ({ setOpenSideMenu, connectWallet, currentAccount }) => {
 
       <div className={Style.sideBar_menu}>
         <div>
+          <Link href={{ pathname: "/" }}>
+            <p onClick={() => closeSideBar()}> Home </p>
+          </Link>
           <div
             className={Style.sideBar_menu_box}
             onClick={() => openDiscoverMenu()}

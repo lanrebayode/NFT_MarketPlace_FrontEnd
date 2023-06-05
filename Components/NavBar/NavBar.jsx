@@ -149,6 +149,9 @@ const NavBar = () => {
 
         {/* //START OF RIGHT SECTION */}
         <div className={Style.navbar_container_right}>
+          <Link href={{ pathname: "/" }}>
+            <p> Home </p>
+          </Link>
           {/* //...DISCOVER MENU */}
           <div
             className={Style.navbar_container_right_discover}
