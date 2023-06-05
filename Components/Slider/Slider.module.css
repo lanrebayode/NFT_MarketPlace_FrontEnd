@@ -62,12 +62,17 @@
 }
 
 @media screen and (max-width: 35em) {
-    /* .slider_box{
-        width: 90%;
-    } */
+    .slider_box{
+        width: 100%;
+    }
 
     .slider_box h2{
+        padding: 0 1rem;
         font-size: 2rem;
+    }
+
+    .slider_box p{
+        padding: 0 1rem;
     }
 
     /* .slider_box_item{
