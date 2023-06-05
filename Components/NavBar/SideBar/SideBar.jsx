@@ -27,30 +27,34 @@ const SideBar = ({ setOpenSideMenu, connectWallet, currentAccount }) => {
   const discover = [
     {
       name: "Collection",
-      link: "NFT-details",
+      link: "CollectionPage",
     },
     {
       name: "Search",
-      link: "search",
+      link: "searchPage",
     },
     {
       name: "Author Profile",
-      link: "author-profile",
+      link: "author",
     },
     {
       name: "NFT Details",
-      link: "NFT-details",
+      link: "NFTDetails",
     },
     {
       name: "Account Settings",
-      link: "account-setting",
+      link: "account",
+    },
+    {
+      name: "Upload NFT",
+      link: "uploadNft",
     },
     {
       name: "Connect Wallet",
-      link: "Connect-wallet",
+      link: "connectWallet",
     },
     {
-      name: "BLog",
+      name: "Blog",
       link: "blog",
     },
   ];
@@ -59,11 +63,11 @@ const SideBar = ({ setOpenSideMenu, connectWallet, currentAccount }) => {
   const helpCenter = [
     {
       name: "About",
-      link: "about",
+      link: "aboutUs",
     },
     {
       name: "Contact Us",
-      link: "contact-us",
+      link: "contactUs",
     },
     {
       name: "Sign Up",
@@ -75,7 +79,7 @@ const SideBar = ({ setOpenSideMenu, connectWallet, currentAccount }) => {
     },
     {
       name: "Subscription",
-      link: "subsciption",
+      link: "subscription",
     },
   ];
 
@@ -145,7 +149,12 @@ const SideBar = ({ setOpenSideMenu, connectWallet, currentAccount }) => {
             <div className={Style.sideBar_discover}>
               {discover.map((el, i) => (
                 <p className={Style.sideBar_options} key={i + 1}>
-                  <Link href={{ pathname: `${el.link}` }}>{el.name}</Link>
+                  <Link
+                    onClick={() => closeSideBar()}
+                    href={{ pathname: `${el.link}` }}
+                  >
+                    {el.name}
+                  </Link>
                 </p>
               ))}
             </div>
@@ -160,7 +169,12 @@ const SideBar = ({ setOpenSideMenu, connectWallet, currentAccount }) => {
           <div className={Style.sideBar_discover}>
             {helpCenter.map((el, i) => (
               <p className={Style.sideBar_options} key={i + 1}>
-                <Link href={{ pathname: `${el.link}` }}>{el.name}</Link>
+                <Link
+                  onClick={() => closeSideBar()}
+                  href={{ pathname: `${el.link}` }}
+                >
+                  {el.name}
+                </Link>
               </p>
             ))}
           </div>
