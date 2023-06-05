@@ -34,6 +34,7 @@ const Slider = () => {
       user: images.user6,
     },
   ];
+
   const [width, setWidth] = useState(0);
   const dragSlider = useRef(0);
 
@@ -43,7 +44,7 @@ const Slider = () => {
 
   const handleScroll = (direction) => {
     const { current } = dragSlider;
-    const scrollAmount = window.innerWidth > 1800 ? 270 : 210;
+    const scrollAmount = window.innerWidth > 1300 ? 270 : 210;
 
     if (direction == "left") {
       current.scrollLeft -= scrollAmount;

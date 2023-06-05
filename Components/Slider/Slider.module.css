@@ -62,19 +62,19 @@
 }
 
 @media screen and (max-width: 35em) {
-    .slider_box{
+    /* .slider_box{
         width: 90%;
-    }
+    } */
 
     .slider_box h2{
         font-size: 2rem;
     }
 
-    .slider_box_item{
+    /* .slider_box_item{
         overflow: auto;
         grid-template-columns: repeat(6, 95fr);
         padding: 4rem 0;
-    }
+    } */
 
     .slider_box_button_btn_icon{
         padding: .5rem;

@@ -39,12 +39,14 @@ const discover = [
     link: "blog",
   },
 ];
-const Discover = () => {
+const Discover = ({ handleClick }) => {
   return (
     <div>
       {discover.map((el, i) => (
         <div key={i + 1} className={Style.discover}>
-          <Link href={{ pathname: `${el.link}` }}>{el.name}</Link>
+          <Link href={{ pathname: `${el.link}` }} onClick={handleClick}>
+            {el.name}
+          </Link>
         </div>
       ))}
     </div>

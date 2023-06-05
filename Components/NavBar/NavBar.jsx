@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 //___IMPORT ICON
@@ -23,6 +23,11 @@ const NavBar = () => {
   const [profile, setProfile] = useState(false);
   const [openSideMenu, setOpenSideMenu] = useState(false);
 
+  let discoverRef = useRef();
+  let helpRef = useRef();
+  let profileRef = useRef();
+  let notificationRef = useRef();
+
   const onDiscover = () => {
     if (!discover) {
       setDiscover(true);
@@ -36,6 +41,7 @@ const NavBar = () => {
       setProfile(false);
     }
   };
+
   const onHelCenter = () => {
     if (!help) {
       setHelp(true);
@@ -80,6 +86,44 @@ const NavBar = () => {
     }
   };
 
+  useEffect(() => {
+    let handler = (e) => {
+      if (!discoverRef.current.contains(e.target)) {
+        console.log(discoverRef.current.contains(e.target));
+        setDiscover(false);
+      }
+    };
+    let handler2 = (e) => {
+      if (!helpRef.current.contains(e.target)) {
+        console.log(helpRef.current.contains(e.target));
+        setHelp(false);
+      }
+    };
+    let handler3 = (e) => {
+      if (!notificationRef.current.contains(e.target)) {
+        console.log(notificationRef.current.contains(e.target));
+        setNotification(false);
+      }
+    };
+    let handler4 = (e) => {
+      if (!profileRef.current.contains(e.target)) {
+        console.log(profileRef.current.contains(e.target));
+        setProfile(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    document.addEventListener("mousedown", handler2);
+    document.addEventListener("mousedown", handler3);
+    document.addEventListener("mousedown", handler4);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+      document.removeEventListener("mousedown", handler2);
+      document.removeEventListener("mousedown", handler3);
+      document.removeEventListener("mousedown", handler4);
+    };
+  }, []);
+
   const { currentAccount, connectWallet } = useContext(NFTMarketPlaceContext);
 
   return (
@@ -106,11 +150,17 @@ const NavBar = () => {
         {/* //START OF RIGHT SECTION */}
         <div className={Style.navbar_container_right}>
           {/* //...DISCOVER MENU */}
-          <div className={Style.navbar_container_right_discover}>
+          <div
+            className={Style.navbar_container_right_discover}
+            ref={discoverRef}
+          >
             <p onClick={() => onDiscover()}> Discover </p>
             {discover && (
-              <div className={Style.navbar_container_right_discover_box}>
-                <Discover />
+              <div
+                className={Style.navbar_container_right_discover_box}
+                ref={discoverRef}
+              >
+                <Discover handleClick={onDiscover} />
               </div>
             )}
           </div>
@@ -119,14 +169,20 @@ const NavBar = () => {
           <div className={Style.navbar_container_right_help}>
             <p onClick={() => onHelCenter()}> Help Center </p>
             {help && (
-              <div className={Style.navbar_container_right_help_box}>
-                <HelpCenter />
+              <div
+                className={Style.navbar_container_right_help_box}
+                ref={helpRef}
+              >
+                <HelpCenter handleClick={onHelCenter} />
               </div>
             )}
           </div>
 
           {/* //..NOTIFICATION MENU */}
-          <div className={Style.navbar_container_right_notify}>
+          <div
+            className={Style.navbar_container_right_notify}
+            ref={notificationRef}
+          >
             <MdNotifications
               className={Style.notify}
               onClick={(e) => openNotification(e)}
@@ -147,7 +203,10 @@ const NavBar = () => {
 
           {/* //..USER PROFILE */}
           <div className={Style.navbar_container_right_profile_box}>
-            <div className={Style.navbar_container_right_profile}>
+            <div
+              className={Style.navbar_container_right_profile}
+              ref={profileRef}
+            >
               <Image
                 className={Style.navbar_container_right_profile}
                 src={images.user1}
